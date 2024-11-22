@@ -1,21 +1,11 @@
-# ok
----
-- name: Install Ansible on Debian/Ubuntu
-  hosts: debian
-  become: yes
+# Dockerfile
+FROM ubuntu:22.04
+LABEL maintainer="Rokia"
 
-  tasks:
-    - name: Update apt cache
-      apt:
-        update_cache: yes
+RUN apt-get update && apt-get install -y nginx && apt-get clean
 
-    - name: Install software-properties-common
-      apt:
-        name: software-properties-common
-        state: present
+COPY index.html /var/www/html/index.html
 
-    - name: Install Ansible
-      apt:
-        name: ansible
-        state: present
+CMD ["nginx", "-g", "daemon off;"]
 
+EXPOSE 80
