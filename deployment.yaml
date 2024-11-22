@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: balama/nianthio/my-nginx:latest # Nouveau dépôt DockerHub
+        image: balama/nianthio/my-nginx-github:latest # Nouveau dépôt DockerHub
         ports:
         - containerPort: 80
 ---
