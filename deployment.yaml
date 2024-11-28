@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: balama/devops:0.1.8-sane-devops-test# Nouveau dépôt DockerHub
+        image: balama/devops:0.1.8-sane-devops-test # Nouveau dépôt DockerHub
         ports:
         - containerPort: 80
 ---
